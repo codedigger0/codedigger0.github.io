@@ -1,0 +1,420 @@
+<html>
+      <head>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+        <meta charset="utf-8">
+        <meta name="referrer" content="never">
+        <title>表单标签的使用和案例 | 柴油味的青春！</title>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css">
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://codedigger0.github.io//styles/main.css">
+          <script src="https://codedigger0.github.io//media/scripts/mdui.min.js"></script>
+        <link rel="stylesheet" href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Ma+Shan+Zheng&display=swap" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+        <script src="https://codedigger0.github.io//media/scripts/script.js"></script>
+        <script >hljs.initHighlightingOnLoad();</script>
+        
+
+    </head>
+    <body class="mdui-theme-primary-purple mdui-theme-accent-purple">
+        <header class="index-img mdui-m-b-3" >
+                          <button class="mdui-btn  mdui-btn-icon mdui-btn-dense mdui-color-theme-500 mdui-ripple yinying mdui-m-t-1 mdui-m-l-1" mdui-menu="{target: '#demo-attr-cascade'}"><i class="mdui-icon material-icons">&#xe5d2;</i></button>
+                <ul class="mdui-menu" id="demo-attr-cascade">
+                
+                        <li class="mdui-menu-item">
+                          <a href="/" class="mdui-ripple">首页</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="/archives" class="mdui-ripple">归档</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="/tags" class="mdui-ripple">标签</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="https://codedigger0.github.io/tags" class="mdui-ripple">关于</a>
+                        </li>
+                
+                      </ul>
+
+        </header>
+        <div class="mdui-container post">
+                <div class="mdui-row">
+                        <div class="mdui-col-md-8 mdui-col-offset-md-2 ">
+                         <article class="mdui-shadow-10 mdui-p-a-2 post-list">
+                           <div class="mdui-typo-display-1 mdui-m-b-3">表单标签的使用和案例</div>
+                           <a  class="index-list-biaoqian ">2023-07-26</a>
+                           <div class="mdui-typo mdui-m-t-3 post-neirong"><h1 id="input标签的使用和属性">input标签的使用和属性</h1>
+<pre><code>&lt;!-- input标签可以通过type属性值的不同，展示不同效果 --&gt;
+    &lt;!-- text 文本框，输入单行文本 --&gt;
+    &lt;!-- password 密码框，用于输入密码 --&gt;
+    &lt;!-- radio 单选框，用于多选一 --&gt;
+    &lt;!-- checkbox 多选框，用于多选多 --&gt;
+    &lt;!-- file 文件选择，用于上传文件 --&gt;
+    &lt;!-- submit 提交按钮，用于提交 --&gt;
+    &lt;!-- reset 重置按钮，用于重置 --&gt;
+    &lt;!-- button 普通按钮 默认无功能，配合js添加功能 --&gt;
+
+    文本：&lt;input type=&quot;text&quot;&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;!-- 书写内容都会显示成*** --&gt;
+    密码框：&lt;input type=&quot;password&quot;&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    单选框：&lt;input type=&quot;radio&quot;&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    多选框：&lt;input type=&quot;checkbox&quot;&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    上传文件：&lt;input type=&quot;file&quot;&gt;
+</code></pre>
+<p>#占位符</p>
+<pre><code>    &lt;!-- placeholder 占位符，提示用户输入内容的文本 --&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;请输入用户名&quot; &gt;
+
+    &lt;input type=&quot;password&quot; placeholder=&quot;请输入密码&quot;&gt;
+</code></pre>
+<p>#单选框</p>
+<pre><code>    &lt;!-- name 分组，有相同name属性值的单选框为一组，一组中同时只能有一个被选中 --&gt;
+    &lt;!-- checked 默认选中 --&gt;
+    性别&lt;input type=&quot;radio&quot; name=&quot;sex&quot; checked&gt;男
+        &lt;input type=&quot;radio&quot; name=&quot;sex&quot;&gt;女
+
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;!-- 多选框默认选中 --&gt;
+    &lt;input type=&quot;checkbox&quot; checked&gt;
+</code></pre>
+<p>#上传文件</p>
+<pre><code>    &lt;!-- multiple 上传文件多文件选择 --&gt;
+    &lt;input type=&quot;file&quot; multiple&gt;
+</code></pre>
+<p>#按钮input</p>
+<pre><code>        &lt;!-- subimt 提交按钮，点击之后提交数据给后端服务器 --&gt;
+        &lt;!-- reset 重置按钮， 点击之后恢复表单的默认值 --&gt;
+        &lt;!-- button 普通按钮，默认无功能 --&gt;
+        &lt;!-- form 作为数据父标签 --&gt;
+        &lt;!-- action=&quot;数据提交的地址&quot; --&gt;
+         &lt;form action=&quot;&quot;&gt;
+            用户名：&lt;input type=&quot;text&quot; placeholder=&quot;请输入用户名&quot;&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        密码：&lt;input type=&quot;password &quot; placeholder=&quot;请输入密码&quot;&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;免费注册&quot;&gt;
+        &lt;input type=&quot;reset&quot;&gt;
+        &lt;!-- value 给按钮添加文字显示 --&gt;
+        &lt;!-- 属性  xx=“xxxx” --&gt;
+        &lt;input type=&quot;button&quot; value=&quot;普通按钮&quot;&gt;
+
+         &lt;/form&gt;
+</code></pre>
+<p>#按钮button</p>
+<pre><code>        &lt;!-- subimt 提交按钮，点击之后提交数据给后端服务器 --&gt;
+        &lt;!-- reset 重置按钮， 点击之后恢复表单的默认值 --&gt;
+        &lt;!-- button 普通按钮，默认无功能 --&gt;
+        &lt;!-- button 相当于自定义按钮 --&gt;
+        &lt;button&gt;我是按钮&lt;/button&gt;
+
+        &lt;button type=&quot;submit&quot;&gt;提交按钮&lt;/button&gt;
+        &lt;button type=&quot;reset&quot;&gt;重置按钮&lt;/button&gt;
+        &lt;button type=&quot;button&quot;&gt;普通按钮 没有功能&lt;/button&gt;
+</code></pre>
+<p>#下拉菜单</p>
+<pre><code>    &lt;!-- select 在网页中提供多个选择项的下拉菜单表单控件 --&gt;
+    &lt;!-- select 下拉菜单的 整体--&gt;
+    &lt;!-- option 下拉菜单的每一项 --&gt;
+    &lt;!-- selected 下拉菜单的默认选中 --&gt;
+    &lt;!-- select与option 是父子系关系 --&gt;
+    &lt;select &gt;
+        &lt;option selected&gt;北京&lt;/option&gt;
+        &lt;option &gt;上海&lt;/option&gt;
+        &lt;option &gt;广州&lt;/option&gt;
+        &lt;option &gt;深圳&lt;/option&gt;
+        
+    &lt;/select&gt;
+</code></pre>
+<p>#文本域</p>
+<pre><code>    &lt;!-- textarea 在网页中提供可输入多行文本的表单控件 --&gt;
+    &lt;!-- cols 规定文本域内可见宽度 --&gt;
+    &lt;!-- rows 规定文本域内可见行数 --&gt;
+    &lt;!-- 右下角可拖拽改变大小 --&gt;
+    &lt;textarea  cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;
+</code></pre>
+<p>#lable标签</p>
+<pre><code>    &lt;!-- 使用lable标签 把内容/文本包裹起来 --&gt;
+    &lt;!-- 在表单上添加id属性 --&gt;
+    &lt;!-- 在lable标签的for属性设置对应的id属性值 --&gt;
+    性别:    &lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;nan&quot;&gt;&lt;label for=&quot;nan&quot;&gt;男&lt;/label&gt;
+
+            &lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;nv&quot;&gt;&lt;label for=&quot;nv&quot;&gt;女&lt;/label&gt;
+
+    &lt;!-- 直接使用lable标签把内容和表单标签一起包裹起来 --&gt;
+    &lt;!-- 把lable标签饿for属性删除即可 --&gt;
+
+    性别：  
+
+        &lt;label &gt;&lt;input type=&quot;radio&quot; name=&quot;1&quot;&gt;男&lt;/label&gt;
+        &lt;label &gt;&lt;input type=&quot;radio&quot; name=&quot;1&quot;&gt;女&lt;/label&gt;
+        
+
+        &lt;!-- 不能够这样书写 这样把两个单选框都选中了。一个lable包裹一个单选框 --&gt;
+        &lt;label &gt;
+            &lt;input type=&quot;radio&quot; name=&quot;1&quot;&gt;男
+            &lt;input type=&quot;radio&quot; name=&quot;1&quot;&gt;女
+        &lt;/label&gt;
+
+</code></pre>
+<p>#没有语义的标签</p>
+<pre><code>    &lt;!-- div标签：一行只显示一个 独占一行 --&gt;
+    &lt;!-- span标签：一行可以显示多个 --&gt;
+    &lt;div&gt;这是div标签&lt;/div&gt;
+    &lt;div&gt;这是div标签&lt;/div&gt;
+    &lt;span&gt;这是span标签&lt;/span&gt;
+    &lt;span&gt;这是span标签&lt;/span&gt;
+</code></pre>
+<p>#有语义的标签</p>
+<pre><code>&lt;!--和div显示特点一致 比div多了语义 --&gt;
+
+    &lt;header&gt;网页头部&lt;/header&gt;
+    &lt;nav&gt;网页导航&lt;/nav&gt;
+    &lt;footer&gt;网页底部&lt;/footer&gt;
+    &lt;aside&gt;侧边栏&lt;/aside&gt;
+    &lt;section&gt;网页区块&lt;/section&gt;
+    &lt;article&gt;网页的文章&lt;/article&gt;
+</code></pre>
+<p>#字符实体</p>
+<pre><code>    &lt;!-- 网页不认识多个空格，只认识一个空格 --&gt;
+    &lt;!--  添加空格：&amp;nbsp;--&gt;
+    这是HTML文档， &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;现在要要学习字符实体
+</code></pre>
+<p>#表格综合案例</p>
+<figure data-type="image" tabindex="1"><img src="https://s2.loli.net/2023/07/26/cvSPHQhnogwJieB.png" alt="20230726182940" loading="lazy"></figure>
+<pre><code>&lt;caption&gt;&lt;h1&gt;优秀学生信息表&lt;/h1&gt;&lt;/caption&gt;
+    &lt;table border=&quot;2&quot; width=&quot;300&quot; height=&quot;300&quot; &gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;年级&lt;/th&gt;
+                &lt;th&gt;姓名&lt;/th&gt;
+                &lt;th&gt;学号&lt;/th&gt;
+                &lt;th&gt;班级&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;!-- rowspan 垂直合并 --&gt;
+                &lt;td rowspan=&quot;2&quot;&gt;高三&lt;/td&gt;
+                &lt;td&gt;黑蛋&lt;/td&gt;
+                &lt;td&gt;99&lt;/td&gt;
+                &lt;td&gt;一年级二班&lt;/td&gt;
+            &lt;/tr&gt;
+    
+            &lt;tr&gt;
+                
+                &lt;td&gt;狗蛋&lt;/td&gt;
+                &lt;td&gt;89&lt;/td&gt;
+                &lt;td&gt;一年级三班&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+        
+        &lt;tfoot&gt;
+            &lt;tr&gt;
+                &lt;td&gt;评语&lt;/td&gt;
+                &lt;!-- colspan 水平合并 --&gt;
+                &lt;td colspan=&quot;3&quot;&gt;你们都很优秀&lt;/td&gt;
+                
+            &lt;/tr&gt;
+        &lt;/tfoot&gt;
+ &lt;/table&gt;
+</code></pre>
+<p>#表单综合案例<br>
+<img src="https://s2.loli.net/2023/07/26/ofJ7eyjmaNq29ln.png" alt="20230726182858" loading="lazy"></p>
+<pre><code>&lt;h1&gt;青春不常在·抓紧谈恋爱&lt;/h1&gt;
+    &lt;hr&gt;
+ &lt;form action=&quot;&quot;&gt;
+    
+    昵称：&lt;input type=&quot;text&quot; placeholder=&quot;请输入昵称&quot;&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    性别：&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;sex&quot; checked&gt;男&lt;/label&gt;
+        &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;sex&quot;&gt;女 &lt;/label&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    所在城市：&lt;select&gt;
+                &lt;option selected&gt;狗蛋村&lt;/option&gt;
+                &lt;option &gt;黑蛋村&lt;/option&gt;
+                &lt;option &gt;蛋蛋村&lt;/option&gt;
+                &lt;option &gt;傻蛋村&lt;/option&gt;
+            &lt;/select&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    婚姻状况：&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;one&quot; checked&gt;未婚&lt;/label&gt;
+            &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;one&quot;&gt;已婚&lt;/label&gt;
+             &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;one&quot;&gt;保密&lt;/label&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    喜欢的类型：
+    
+    &lt;label &gt;&lt;input type=&quot;checkbox&quot; checked&gt;可爱 &lt;/label&gt;      
+    &lt;label &gt;&lt;input type=&quot;checkbox&quot; checked&gt;性感 &lt;/label&gt;      
+    &lt;label &gt;&lt;input type=&quot;checkbox&quot; &gt;御姐&lt;/label&gt;      
+    &lt;label &gt;&lt;input type=&quot;checkbox&quot; &gt;萝莉 &lt;/label&gt;      
+    &lt;label &gt;&lt;input type=&quot;checkbox&quot; &gt;小鲜肉 &lt;/label&gt;      
+    &lt;label &gt;&lt;input type=&quot;checkbox&quot; &gt;大叔 &lt;/label&gt;      
+               
+            
+    &lt;br&gt;
+    &lt;br&gt;
+    个人介绍：
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;textarea cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;h2&gt;我承诺&lt;/h2&gt;
+    &lt;ol&gt;
+        &lt;li&gt;年满18岁，单身&lt;/li&gt;
+        &lt;li&gt;抱着严肃的态度&lt;/li&gt;
+        &lt;li&gt;真诚的寻找另一半&lt;/li&gt;
+        
+    &lt;/ol&gt;
+   
+    &lt;br&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;我同意所有条款
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;!-- 按钮可以用input / button --&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;免费注册&quot;&gt;
+    &lt;!-- &lt;input type=&quot;reset&quot;&gt; --&gt;
+    &lt;button type=&quot;reset&quot;&gt;重置&lt;/button&gt;
+    &lt;!-- 记得用form包整个表单包起来 不然重置没有作用 --&gt;
+    
+ &lt;/form&gt;
+</code></pre>
+</div>
+                              <div class="mdui-divider mdui-m-t-3"></div>
+                              <div class="mdui-row-xs-2 mdui-m-t-2">
+  <div class="mdui-col"> <div class="mdui-text-left"><a href="https://codedigger0.github.io/post/css-xuan-ze-qi/">CSS选择器</a></div></div>
+ <div class="mdui-col"><div class="mdui-text-right "><a href="https://codedigger0.github.io/post/biao-ge-biao-qian/">表格标签</a></div> </div>
+                                </div>
+                                <div class="mdui-divider mdui-m-t-2"></div>
+   
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'ddb0c3ed2fef5985eaab',
+    clientSecret: '829a0fe7f46fa3fd1ee83211786c4dd39afb1ddd',
+    repo: 'codedigger0.github.io',
+    owner: 'codedigger0',
+    admin: ['codedigger0'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+ <script src="https://codedigger0.github.io//media/scripts/Valine.min.js"></script>
+ <div class="comment"></div>
+
+<script>
+      new Valine({
+            el: '.comment',
+
+
+
+            path: window.location.pathname,
+            pageSize: 30,
+            avatar:'mm', 
+       })
+
+    </script> 
+<script>
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+           if ($(window.location.hash).length) {
+              $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+              clearInterval(checkExist);
+           }
+        }, 100);
+    }
+</script>
+                         </article>
+                 <div class="toc-container mdui-float-right">
+                <ul class="markdownIt-TOC">
+<li><a href="#input%E6%A0%87%E7%AD%BE%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E5%B1%9E%E6%80%A7">input标签的使用和属性</a></li>
+</ul>
+
+              </div>
+
+                        </div>
+                 </div>
+          
+        </div>
+        <script data-no-instant>
+    (function ($) {
+        $.extend({
+            adamsOverload: function () {
+                $.viewImage({
+                    'target'  : '.post-neirong img',
+                    'exclude' : '.vsmile-icons img , .song-links-item img',
+                    'delay'   : 300
+                });
+            }
+        });
+    })(jQuery);
+    jQuery.adamsOverload();
+</script>
+        <footer class="footer mdui-m-t-5 mdui-text-center">
+               <nav class="social-links">
+                      <ul>
+                      
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                      </ul>
+                    </nav>
+                  <div class="copyright">
+                      <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
+                  </div>
+              </footer>
+    </body>
+</html>

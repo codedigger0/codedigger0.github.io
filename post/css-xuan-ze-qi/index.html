@@ -1,0 +1,295 @@
+<html>
+      <head>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+        <meta charset="utf-8">
+        <meta name="referrer" content="never">
+        <title>CSS选择器 | 柴油味的青春！</title>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css">
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://codedigger0.github.io//styles/main.css">
+          <script src="https://codedigger0.github.io//media/scripts/mdui.min.js"></script>
+        <link rel="stylesheet" href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Ma+Shan+Zheng&display=swap" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+        <script src="https://codedigger0.github.io//media/scripts/script.js"></script>
+        <script >hljs.initHighlightingOnLoad();</script>
+        
+
+    </head>
+    <body class="mdui-theme-primary-purple mdui-theme-accent-purple">
+        <header class="index-img mdui-m-b-3" >
+                          <button class="mdui-btn  mdui-btn-icon mdui-btn-dense mdui-color-theme-500 mdui-ripple yinying mdui-m-t-1 mdui-m-l-1" mdui-menu="{target: '#demo-attr-cascade'}"><i class="mdui-icon material-icons">&#xe5d2;</i></button>
+                <ul class="mdui-menu" id="demo-attr-cascade">
+                
+                        <li class="mdui-menu-item">
+                          <a href="/" class="mdui-ripple">首页</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="/archives" class="mdui-ripple">归档</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="/tags" class="mdui-ripple">标签</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="https://codedigger0.github.io/tags" class="mdui-ripple">关于</a>
+                        </li>
+                
+                      </ul>
+
+        </header>
+        <div class="mdui-container post">
+                <div class="mdui-row">
+                        <div class="mdui-col-md-8 mdui-col-offset-md-2 ">
+                         <article class="mdui-shadow-10 mdui-p-a-2 post-list">
+                           <div class="mdui-typo-display-1 mdui-m-b-3">CSS选择器</div>
+                           <a  class="index-list-biaoqian ">2023-07-26</a>
+                           <div class="mdui-typo mdui-m-t-3 post-neirong"><p>css的引入方式</p>
+<pre><code> /* 内嵌式 */
+  &lt;style&gt;
+        /* css的注释 */
+        /* css写在stlye标签中 */
+        /* 选择器:{css属性} */
+        /* 选择器查找标签 */
+      
+        p{
+            /*文字颜色变红  */
+            color: red;
+
+            /* 字变大  px:像素*/
+            font-size: 30px;
+
+            /* 背景颜色 */
+            background-color: yellowgreen;
+
+            /* width height */
+            width: 400px; height: 400px;
+
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;这是一个p标签&lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://s2.loli.net/2023/07/26/FB2NsiqR7LTkduI.png" alt="20230726203003" loading="lazy"></figure>
+<pre><code>&lt;head&gt;
+    &lt;!-- 内嵌式：css写在style标签中  通常写在head标签中--&gt;
+    &lt;!-- 外联式：css写在单独的.css文件中 通过link标签引入到html中--&gt;
+    &lt;!-- 行内式：css写在stlye属性中 --&gt;
+    &lt;!-- 关系：样式表 --&gt;
+    &lt;!-- css样式用link标签引入 --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;./my.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;这是一个p标签&lt;/p&gt;
+    &lt;!-- 行内式css --&gt;
+    &lt;div style=&quot; color: aqua; font-size: 20px;&quot;&gt;这是div标签&lt;/div&gt;
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://s2.loli.net/2023/07/26/DArWtwEuHmZpUxQ.png" alt="20230726203810" loading="lazy"></figure>
+<p>标签选择器</p>
+<pre><code>&lt;style&gt;
+        /* 选择器{} */
+        /* 标签选择器 就是 以标签命名的选择器 */
+        /* 标签选择器 选中的这个标签生效css样式 */
+        p{
+            color: red;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;你是一个小可爱&lt;/p&gt;
+    &lt;p&gt;你是一个小可爱&lt;/p&gt;
+    &lt;p&gt;你是一个小可爱&lt;/p&gt;
+    &lt;p&gt;你是一个小可爱&lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://s2.loli.net/2023/07/26/j6dSbBtypU5vqR1.png" alt="20230726203924" loading="lazy"></figure>
+<p>类选择器</p>
+<pre><code>&lt;style&gt;
+    /* &lt;!-- 类选择器 结构 .类名{ css属性名：属性值；} --&gt; */
+    /* &lt;!-- 所有标签都有class属性 class 属性的属性值为类名 --&gt; */
+    /* &lt;!-- 不能以数字和中划线开头 --&gt; */
+    /* &lt;!-- 类名可以重复，一个选择器可以同时选中多个标签 --&gt; */
+    /* &lt;!-- 类：定义 和 使用才能生效 --&gt; */
+    /* &lt;!-- 针对性的控制某一个标签 --&gt; */
+        .red{
+            color: #ff5e00;
+        }
+
+        .size{
+            font-size: 30px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+
+    &lt;p&gt;dddddd&lt;/p&gt;
+
+    &lt;!-- 一个标签可以同时有多个类名类名之间以空格隔开 --&gt;
+    &lt;p class=&quot;red size&quot; &gt;dddddd&lt;/p&gt;
+    &lt;p&gt;dddddd&lt;/p&gt;
+
+    &lt;div class=&quot;red&quot;&gt;想把这个文字变红&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<figure data-type="image" tabindex="4"><img src="https://s2.loli.net/2023/07/26/gExbZIPKUWYq9pV.png" alt="20230726204040" loading="lazy"></figure>
+<p>id选择器</p>
+<pre><code> &lt;style&gt;
+        /* 结构 ： #id属性值{css属性名：属性值} */
+        /* 所有标签都有id属性值 */
+        /* id属性值在页面是唯一的 不可重复的 */
+        /* 一个标签只能有一个id属性值 */
+        /* 一个id选择器只能选中一个标签 */
+        
+        /* 定义id选择器 */
+        #blue{
+            color: blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;blue&quot;&gt;这是div标签哈哈哈哈&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<figure data-type="image" tabindex="5"><img src="https://s2.loli.net/2023/07/26/KqpE3CUgsTQxXoN.png" alt="20230726204201" loading="lazy"></figure>
+<p>通配符选择器</p>
+<pre><code>&lt;style&gt;
+        /* 结构 ： *{css属性名：属性值；} */
+        /* 去除标签默认的margin和padding  清除默认的内外间距*/
+        *{
+            color: red;
+            margin: 0;
+            padding: 0;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;哈哈哈哈&lt;/div&gt;
+    &lt;p&gt;哈哈哈哈&lt;/p&gt;
+    &lt;h1&gt;hahahha&lt;/h1&gt;
+    &lt;span&gt;hahahahaha&lt;/span&gt;
+&lt;/body&gt;
+</code></pre>
+<figure data-type="image" tabindex="6"><img src="https://s2.loli.net/2023/07/26/bEcDyhINAQd1tp5.png" alt="20230726204300" loading="lazy"></figure>
+</div>
+                              <div class="mdui-divider mdui-m-t-3"></div>
+                              <div class="mdui-row-xs-2 mdui-m-t-2">
+  <div class="mdui-col"> <div class="mdui-text-left"><a href="https://codedigger0.github.io/post/keng-shi-du-men-jue-ji-zheng-ping-da-fa-quan-huang-sha-di-zheng-ping-so-easy/">【坑氏独门绝技整平大法】全黄沙地整平 So easy！</a></div></div>
+ <div class="mdui-col"><div class="mdui-text-right "><a href="https://codedigger0.github.io/post/biao-dan-biao-qian-de-shi-yong-he-an-li/">表单标签的使用和案例</a></div> </div>
+                                </div>
+                                <div class="mdui-divider mdui-m-t-2"></div>
+   
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'ddb0c3ed2fef5985eaab',
+    clientSecret: '829a0fe7f46fa3fd1ee83211786c4dd39afb1ddd',
+    repo: 'codedigger0.github.io',
+    owner: 'codedigger0',
+    admin: ['codedigger0'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+ <script src="https://codedigger0.github.io//media/scripts/Valine.min.js"></script>
+ <div class="comment"></div>
+
+<script>
+      new Valine({
+            el: '.comment',
+
+
+
+            path: window.location.pathname,
+            pageSize: 30,
+            avatar:'mm', 
+       })
+
+    </script> 
+<script>
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+           if ($(window.location.hash).length) {
+              $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+              clearInterval(checkExist);
+           }
+        }, 100);
+    }
+</script>
+                         </article>
+                 <div class="toc-container mdui-float-right">
+                
+              </div>
+
+                        </div>
+                 </div>
+          
+        </div>
+        <script data-no-instant>
+    (function ($) {
+        $.extend({
+            adamsOverload: function () {
+                $.viewImage({
+                    'target'  : '.post-neirong img',
+                    'exclude' : '.vsmile-icons img , .song-links-item img',
+                    'delay'   : 300
+                });
+            }
+        });
+    })(jQuery);
+    jQuery.adamsOverload();
+</script>
+        <footer class="footer mdui-m-t-5 mdui-text-center">
+               <nav class="social-links">
+                      <ul>
+                      
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                      </ul>
+                    </nav>
+                  <div class="copyright">
+                      <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
+                  </div>
+              </footer>
+    </body>
+</html>

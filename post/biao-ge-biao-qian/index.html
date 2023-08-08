@@ -1,0 +1,329 @@
+<html>
+      <head>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+        <meta charset="utf-8">
+        <meta name="referrer" content="never">
+        <title>表格标签 | 柴油味的青春！</title>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css">
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://codedigger0.github.io//styles/main.css">
+          <script src="https://codedigger0.github.io//media/scripts/mdui.min.js"></script>
+        <link rel="stylesheet" href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Ma+Shan+Zheng&display=swap" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+        <script src="https://codedigger0.github.io//media/scripts/script.js"></script>
+        <script >hljs.initHighlightingOnLoad();</script>
+        
+
+    </head>
+    <body class="mdui-theme-primary-purple mdui-theme-accent-purple">
+        <header class="index-img mdui-m-b-3" >
+                          <button class="mdui-btn  mdui-btn-icon mdui-btn-dense mdui-color-theme-500 mdui-ripple yinying mdui-m-t-1 mdui-m-l-1" mdui-menu="{target: '#demo-attr-cascade'}"><i class="mdui-icon material-icons">&#xe5d2;</i></button>
+                <ul class="mdui-menu" id="demo-attr-cascade">
+                
+                        <li class="mdui-menu-item">
+                          <a href="/" class="mdui-ripple">首页</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="/archives" class="mdui-ripple">归档</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="/tags" class="mdui-ripple">标签</a>
+                        </li>
+                
+                        <li class="mdui-menu-item">
+                          <a href="https://codedigger0.github.io/tags" class="mdui-ripple">关于</a>
+                        </li>
+                
+                      </ul>
+
+        </header>
+        <div class="mdui-container post">
+                <div class="mdui-row">
+                        <div class="mdui-col-md-8 mdui-col-offset-md-2 ">
+                         <article class="mdui-shadow-10 mdui-p-a-2 post-list">
+                           <div class="mdui-typo-display-1 mdui-m-b-3">表格标签</div>
+                           <a  class="index-list-biaoqian ">2023-07-24</a>
+                           <div class="mdui-typo mdui-m-t-3 post-neirong"><p>无序列表</p>
+<pre><code>    &lt;!-- ul 表示无序列表的整体 用于包裹li标签 --&gt;
+    &lt;!-- li 表示无序列表的每一项 用于包含每一行的内容 --&gt;
+    &lt;!-- ul标签中只允许包含li li 标签可以包含任意内容--&gt;
+    &lt;!-- 列表的每一项前默认显示圆点符号 --&gt;
+    &lt;ul&gt;
+       &lt;li&gt;榴莲&lt;/li&gt;
+       &lt;li&gt;苹果&lt;/li&gt;
+       &lt;li&gt;香蕉&lt;/li&gt;
+       
+    &lt;/ul&gt;
+</code></pre>
+<p>有序列表</p>
+<pre><code>    &lt;!-- ol 表示有序列表的整体 用于包裹li标签 --&gt;
+    &lt;!-- li 表示无序列表的每一项 用于包含每一行的内容 --&gt;
+    &lt;!-- 列表的每一项前默认显示序号标识 --&gt;
+    &lt;!-- ol 只允许包含li li可以包含任意内容 --&gt;
+    &lt;ol&gt;
+        &lt;li&gt;黑蛋：100分&lt;/li&gt;
+        &lt;li&gt;狗蛋：99分&lt;/li&gt;
+        &lt;li&gt;鸡蛋：88分&lt;/li&gt;
+        &lt;li&gt;小可爱；89分&lt;/li&gt;
+    &lt;/ol&gt;
+</code></pre>
+<p>自定义列表</p>
+<pre><code>    &lt;!-- dl表示自定义列表的整体 用于包裹dt/dd标签 --&gt;
+    &lt;!-- dt 表示自定义列表的主题 --&gt;
+    &lt;!-- dd 表示自定义列表的针对主题的每一项内容 --&gt;
+    &lt;!-- dd前默认显示缩进效果 --&gt;
+    &lt;!-- dl 标签中只允许包含dt/dd标签 --&gt;
+    &lt;!-- dt/dd标签可以包含任意内容 --&gt;
+    &lt;dl&gt;
+        &lt;dt&gt;帮助中心&lt;/dt&gt;
+        &lt;dd&gt;账户管理&lt;/dd&gt;
+        &lt;dd&gt;购物指南&lt;/dd&gt;
+        &lt;dd&gt;订单操作&lt;/dd&gt;
+    &lt;/dl&gt;
+</code></pre>
+<p>表格标题和表头</p>
+<pre><code>&lt;!-- caption 表格大标题 表示表格整体大标题 默认在表格顶部居中位置展示 --&gt;
+    &lt;!-- caption 放在table标签中 --&gt;
+    &lt;!-- th 表头单元格 表示一列小标题表格的第一行默认内部文字加粗并居中显示 --&gt;
+    &lt;table border=&quot;1&quot;&gt;
+        &lt;caption&gt;&lt;h1&gt;学生成绩单&lt;/h1&gt;&lt;/caption&gt;
+        &lt;th&gt;姓名&lt;/th&gt;
+        &lt;th&gt;成绩&lt;/th&gt;
+        &lt;th&gt;总结&lt;/th&gt;
+        &lt;tr&gt;
+            &lt;td&gt;狗蛋&lt;/td&gt;
+            &lt;td&gt;100分&lt;/td&gt;
+            &lt;td&gt;十分帅气&lt;/td&gt;
+
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;黑蛋&lt;/td&gt;
+            &lt;td&gt;100分&lt;/td&gt;
+            &lt;td&gt;十分帅气&lt;/td&gt;
+
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;总结&lt;/td&gt;
+            &lt;td&gt;十分帅气&lt;/td&gt;
+            &lt;td&gt;十分帅气&lt;/td&gt;
+
+        &lt;/tr&gt;
+
+    &lt;/table&gt;
+</code></pre>
+<p>表格结构</p>
+<pre><code>&lt;!--thead 表格的头部  --&gt;
+    &lt;!-- tbody 表格的主体 --&gt;
+    &lt;!-- tfoot 表格底部 --&gt;
+    &lt;!-- 表格结构标签用于包裹tr标签 表格结构标签是可以省略的 --&gt;
+    &lt;table border=&quot;2&quot; width=&quot;300&quot; height=&quot;300&quot;&gt;
+        &lt;caption&gt;&lt;h1&gt;学生成绩单&lt;/h1&gt;&lt;/caption&gt;
+       &lt;thead&gt;
+        &lt;th&gt;姓名&lt;/th&gt;
+        &lt;th&gt;成绩&lt;/th&gt;
+        &lt;th&gt;评语&lt;/th&gt;
+       &lt;/thead&gt;
+
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;小哥哥&lt;/td&gt;
+            &lt;td&gt;100分&lt;/td&gt;
+            &lt;td&gt;小哥哥真帅气&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;小姐姐&lt;/td&gt;
+            &lt;td&gt;100分&lt;/td&gt;
+            &lt;td&gt;小姐姐真漂亮&lt;/td&gt;
+        &lt;/tr&gt;
+        
+
+        
+    &lt;/tbody&gt;
+ 
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;总结&lt;/td&gt;
+            &lt;td&gt;郎才女貌&lt;/td&gt;
+            &lt;td&gt;郎才女貌&lt;/td&gt;
+            
+        &lt;/tr&gt;
+
+    &lt;/tfoot&gt;
+
+
+
+    &lt;/table&gt;
+
+</code></pre>
+<p>合并单元格</p>
+<pre><code>&lt;!-- 明确合并那几个单元格 --&gt;
+    &lt;!-- 上下合并 只保留最上的 删除其他的 --&gt;
+    &lt;!-- 左右合并 只保留最左的 删除其他的 --&gt;
+    &lt;!-- 给保留的单元格设置属性 rowspan/colspan --&gt;
+    &lt;!-- rowspan 将多行单元格垂直合并 --&gt;
+    &lt;!-- colspan 将多行单元格水平合并 --&gt;
+    &lt;!-- 同一结构标签才能合并 不能跨 thead tbody tfoot  --&gt;
+    &lt;!-- rowspan colspan 合并几个单元格取值就是合并单元格的个数 --&gt;
+    &lt;table border=&quot;2&quot; width=&quot;300&quot; height=&quot;300&quot;&gt;
+        &lt;caption&gt;&lt;h1&gt;学生成绩单&lt;/h1&gt;&lt;/caption&gt;
+       &lt;thead&gt;
+        &lt;th&gt;姓名&lt;/th&gt;
+        &lt;th&gt;成绩&lt;/th&gt;
+        &lt;th&gt;评语&lt;/th&gt;
+       &lt;/thead&gt;
+
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;小哥哥&lt;/td&gt;
+            &lt;td rowspan=&quot;2&quot;&gt;100分&lt;/td&gt;
+            &lt;td&gt;小哥哥真帅气&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;小姐姐&lt;/td&gt;
+            
+            &lt;td&gt;小姐姐真漂亮&lt;/td&gt;
+        &lt;/tr&gt;
+        
+
+        
+    &lt;/tbody&gt;
+ 
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;总结&lt;/td&gt;
+            &lt;td colspan=&quot;2&quot;&gt;郎才女貌&lt;/td&gt;
+            
+            
+        &lt;/tr&gt;
+
+    &lt;/tfoot&gt;
+
+
+
+    &lt;/table&gt;
+
+
+</code></pre>
+</div>
+                              <div class="mdui-divider mdui-m-t-3"></div>
+                              <div class="mdui-row-xs-2 mdui-m-t-2">
+  <div class="mdui-col"> <div class="mdui-text-left"><a href="https://codedigger0.github.io/post/biao-dan-biao-qian-de-shi-yong-he-an-li/">表单标签的使用和案例</a></div></div>
+ <div class="mdui-col"><div class="mdui-text-right "><a href="https://codedigger0.github.io/post/ji-chu-biao-qian/">基础标签</a></div> </div>
+                                </div>
+                                <div class="mdui-divider mdui-m-t-2"></div>
+   
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'ddb0c3ed2fef5985eaab',
+    clientSecret: '829a0fe7f46fa3fd1ee83211786c4dd39afb1ddd',
+    repo: 'codedigger0.github.io',
+    owner: 'codedigger0',
+    admin: ['codedigger0'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+ <script src="https://codedigger0.github.io//media/scripts/Valine.min.js"></script>
+ <div class="comment"></div>
+
+<script>
+      new Valine({
+            el: '.comment',
+
+
+
+            path: window.location.pathname,
+            pageSize: 30,
+            avatar:'mm', 
+       })
+
+    </script> 
+<script>
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+           if ($(window.location.hash).length) {
+              $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+              clearInterval(checkExist);
+           }
+        }, 100);
+    }
+</script>
+                         </article>
+                 <div class="toc-container mdui-float-right">
+                
+              </div>
+
+                        </div>
+                 </div>
+          
+        </div>
+        <script data-no-instant>
+    (function ($) {
+        $.extend({
+            adamsOverload: function () {
+                $.viewImage({
+                    'target'  : '.post-neirong img',
+                    'exclude' : '.vsmile-icons img , .song-links-item img',
+                    'delay'   : 300
+                });
+            }
+        });
+    })(jQuery);
+    jQuery.adamsOverload();
+</script>
+        <footer class="footer mdui-m-t-5 mdui-text-center">
+               <nav class="social-links">
+                      <ul>
+                      
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                            
+                           
+                      </ul>
+                    </nav>
+                  <div class="copyright">
+                      <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
+                  </div>
+              </footer>
+    </body>
+</html>
